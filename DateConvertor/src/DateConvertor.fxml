@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="390.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DateController">
+   <children>
+      <Label layoutX="113.0" layoutY="14.0" prefHeight="27.0" prefWidth="200.0" text="Convertisseur de temps" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="day" layoutX="235.0" layoutY="142.0" onKeyTyped="#write" text="0" />
+      <TextField fx:id="month" layoutX="33.0" layoutY="142.0" onKeyTyped="#write" text="0" />
+      <TextField fx:id="minute" layoutX="235.0" layoutY="209.0" onKeyTyped="#write" text="0" />
+      <TextField fx:id="hour" layoutX="33.0" layoutY="209.0" onKeyTyped="#write" text="0" />
+      <TextField fx:id="second" layoutX="33.0" layoutY="272.0" onKeyTyped="#write" text="0" />
+      <TextField fx:id="finalValue" editable="false" layoutX="225.0" layoutY="322.0" prefHeight="44.0" prefWidth="159.0" text="0" />
+      <ChoiceBox fx:id="unit" layoutX="33.0" layoutY="331.0" onAction="#convertUnit" prefHeight="25.0" prefWidth="173.0" value="Secondes">
+        <items>
+           <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Secondes" />
+               <String fx:value="Minutes" />
+               <String fx:value="Heures" />
+               <String fx:value="Jours" />
+               <String fx:value="Mois" />
+           </FXCollections>
+         </items>
+       </ChoiceBox>
+      <Label layoutX="34.0" layoutY="121.0" text="Mois:" />
+      <Label layoutX="236.0" layoutY="121.0" text="Jours:" />
+      <Label layoutX="34.0" layoutY="187.0" text="Heures:" />
+      <Label layoutX="236.0" layoutY="187.0" text="Minutes:" />
+      <Label layoutX="34.0" layoutY="255.0" text="Secondes:" />
+      <Label layoutX="33.0" layoutY="314.0" text="Unité" />
+   </children>
+</AnchorPane>
